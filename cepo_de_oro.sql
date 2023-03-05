@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 01-03-2023 a las 00:22:32
+-- Tiempo de generación: 05-03-2023 a las 04:14:42
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.1.12
 
@@ -137,7 +137,11 @@ INSERT INTO `Discharge` (`number`, `date`, `place`, `beneficiary`, `amount`, `is
 (38, '2023-02-04', 'Loreto', 'Cecilia Sanchez (Sandra Sanchez)', 1000, 0),
 (39, '2023-02-04', 'Loreto', 'Jacqueline Ñacato', 1200, 1),
 (40, '2023-02-04', 'Loreto', 'Luis Anibal Espin', 300, 0),
-(41, '2023-02-04', 'Loreto', 'Susana Cueva', 5, 0);
+(41, '2023-02-04', 'Loreto', 'Susana Cueva', 5, 0),
+(42, '2023-03-04', 'Loreto', 'Nayeli Arteaga', 500, 0),
+(43, '2023-03-04', 'Loreto', 'Laura Fernandez', 1200, 0),
+(44, '2023-03-04', 'Loreto', 'Mayra Sanchez', 500, 0),
+(45, '2023-03-04', 'Loreto', 'Susana Cueva', 5, 0);
 
 -- --------------------------------------------------------
 
@@ -194,7 +198,11 @@ INSERT INTO `Discharge_detail` (`discharge_number`, `description`, `value`) VALU
 (39, 'Prestamo 24 meses plazo, negocio inflables', 1200),
 (40, 'Prestamo 6 meses plazo, consumo', 300),
 (41, 'Alquiler Local', 5),
-(-1, 'Alquiler Local', 4);
+(-1, 'Alquiler Local', 4),
+(42, 'Prestamo 12 meses plazo para emprendimiento', 500),
+(43, 'Prestamo 12 meses plazo para estudios', 1200),
+(44, 'Prestamo 8 meses plazo', 500),
+(45, 'Alquiler de local', 5);
 
 -- --------------------------------------------------------
 
@@ -443,7 +451,41 @@ INSERT INTO `Entry` (`number`, `account_number`, `amount`, `date`, `place`, `is_
 (223, 19, 1, '2023-02-04', 'Loreto', 0),
 (224, 2, 81.84, '2023-02-04', 'Loreto', 1),
 (225, 23, 21, '2023-02-04', 'Loreto', 0),
-(226, 13, 118.71, '2023-02-04', 'Loreto', 1);
+(226, 13, 118.71, '2023-02-04', 'Loreto', 1),
+(227, 2, 81, '2023-03-04', 'Loreto', 1),
+(228, 40, 21, '2023-03-04', 'Loreto', 0),
+(229, 34, 21, '2023-03-04', 'Loreto', 0),
+(230, 30, 21, '2023-03-04', 'Loreto', 0),
+(231, 16, 21, '2023-03-04', 'Loreto', 0),
+(232, 18, 21, '2023-03-04', 'Loreto', 0),
+(233, 21, 54.23, '2023-03-04', 'Loreto', 0),
+(234, 28, 91.66, '2023-03-04', 'Loreto', 0),
+(235, 47, 125, '2023-03-04', 'Loreto', 0),
+(236, 37, 21, '2023-03-04', 'Loreto', 0),
+(237, 46, 21, '2023-03-04', 'Loreto', 0),
+(238, 48, 124.33, '2023-03-04', 'Loreto', 0),
+(239, 35, 21, '2023-03-04', 'Loreto', 1),
+(240, 45, 21, '2023-03-04', 'Loreto', 0),
+(241, 31, 21, '2023-03-04', 'Loreto', 0),
+(242, 4, 92, '2023-03-04', 'Loreto', 0),
+(243, 1, 101.66, '2023-03-04', 'Loreto', 0),
+(244, 24, 21, '2023-03-04', 'Loreto', 0),
+(245, 38, 65.19, '2023-03-04', 'Loreto', 0),
+(246, 51, 21, '2023-03-04', 'Loreto', 0),
+(247, 26, 93.23, '2023-03-04', 'Loreto', 0),
+(248, 9, 21, '2023-03-04', 'Loreto', 0),
+(249, 41, 21, '2023-03-04', 'Loreto', 0),
+(250, 33, 48, '2023-03-04', 'Loreto', 0),
+(251, 49, 21, '2023-03-04', 'Loreto', 0),
+(252, 50, 65.19, '2023-03-04', 'Loreto', 0),
+(253, 12, 21, '2023-03-04', 'Loreto', 0),
+(254, 14, 91.66, '2023-03-04', 'Loreto', 0),
+(255, 20, 21, '2023-03-04', 'Loreto', 0),
+(256, 3, 21, '2023-03-04', 'Loreto', 1),
+(257, 13, 118.71, '2023-03-04', 'Loreto', 1),
+(258, 23, 21, '2023-03-04', 'Loreto', 0),
+(259, 17, 43, '2023-03-04', 'Loreto', 1),
+(260, 19, 95, '2023-03-04', 'Loreto', 1);
 
 -- --------------------------------------------------------
 
@@ -1107,7 +1149,102 @@ INSERT INTO `Entry_detail` (`entry_number`, `type_id`, `value`) VALUES
 (-1, 8, 160),
 (-1, 9, 8),
 (-1, 1, 10),
-(-2, 3, 200);
+(-2, 3, 200),
+(227, 3, 41.67),
+(227, 4, 18.33),
+(227, 8, 20),
+(227, 9, 1),
+(228, 8, 20),
+(228, 9, 1),
+(229, 8, 20),
+(229, 9, 1),
+(230, 8, 20),
+(230, 9, 1),
+(231, 8, 20),
+(231, 9, 1),
+(232, 8, 20),
+(232, 9, 1),
+(233, 3, 29.67),
+(233, 4, 3.56),
+(233, 8, 20),
+(233, 9, 1),
+(234, 3, 66.66),
+(234, 4, 4),
+(234, 8, 20),
+(234, 9, 1),
+(235, 3, 100),
+(235, 4, 4),
+(235, 8, 20),
+(235, 9, 1),
+(236, 8, 20),
+(236, 9, 1),
+(237, 8, 20),
+(237, 9, 1),
+(238, 3, 83.33),
+(238, 4, 20),
+(238, 8, 20),
+(238, 9, 1),
+(239, 8, 20),
+(239, 9, 1),
+(240, 8, 20),
+(240, 9, 1),
+(241, 8, 20),
+(241, 9, 1),
+(242, 3, 50),
+(242, 4, 21),
+(242, 8, 20),
+(242, 9, 1),
+(243, 3, 83.33),
+(243, 4, 18.33),
+(244, 8, 20),
+(244, 9, 1),
+(245, 3, 40.17),
+(245, 4, 4.02),
+(245, 8, 20),
+(245, 9, 1),
+(246, 8, 20),
+(246, 9, 1),
+(247, 3, 55.56),
+(247, 4, 16.67),
+(247, 8, 20),
+(247, 9, 1),
+(248, 8, 20),
+(248, 9, 1),
+(249, 8, 20),
+(249, 9, 1),
+(250, 3, 25),
+(250, 4, 2),
+(250, 8, 20),
+(250, 9, 1),
+(251, 8, 20),
+(251, 9, 1),
+(252, 3, 40.17),
+(252, 4, 4.02),
+(252, 8, 20),
+(252, 9, 1),
+(253, 8, 20),
+(253, 9, 1),
+(254, 3, 66.66),
+(254, 4, 4),
+(254, 8, 20),
+(254, 9, 1),
+(255, 8, 20),
+(255, 9, 1),
+(256, 8, 20),
+(256, 9, 1),
+(257, 3, 85.71),
+(257, 4, 12),
+(257, 8, 20),
+(257, 9, 1),
+(258, 8, 20),
+(258, 9, 1),
+(259, 6, 1),
+(259, 8, 40),
+(259, 9, 2),
+(260, 3, 50),
+(260, 4, 24),
+(260, 8, 20),
+(260, 9, 1);
 
 -- --------------------------------------------------------
 
@@ -1170,16 +1307,16 @@ INSERT INTO `Loan` (`number`, `account`, `date`, `value`, `term`, `rate`, `is_en
 (8, 47, '2022-08-06', 136, 2, 2, 1, NULL, NULL),
 (9, 0, '2022-08-06', 0, 0, 0, 1, NULL, NULL),
 (10, 1, '2022-08-06', 300, 6, 2, 1, 20, NULL),
-(11, 20, '2022-08-06', 300, 6, 2, 1, NULL, NULL),
+(11, 20, '2022-08-06', 300, 6, 2, 1, 13, NULL),
 (12, 0, '2022-08-06', 0, 0, 0, 1, NULL, NULL),
 (13, 45, '2022-08-06', 92, 5, 2, 1, NULL, NULL),
 (14, 46, '2022-08-06', 76, 5, 2, 1, NULL, NULL),
-(15, 48, '2022-09-03', 200, 6, 2, 1, NULL, NULL),
+(15, 48, '2022-09-03', 200, 6, 2, 1, 16, NULL),
 (16, 21, '2022-10-01', 178, 6, 2, 0, NULL, NULL),
 (17, 14, '2022-10-01', 200, 6, 2, 0, 12, NULL),
 (18, 28, '2022-10-01', 200, 6, 2, 0, 47, NULL),
 (19, 4, '2022-10-01', 300, 3, 2, 1, 16, NULL),
-(20, 20, '2022-10-01', 1500, 24, 2, 1, 17, NULL),
+(20, 20, '2022-10-01', 1500, 24, 2, 1, 17, 19),
 (21, 13, '2022-10-01', 600, 7, 2, 0, 23, NULL),
 (22, 48, '2022-11-12', 340, 8, 2, 1, 16, NULL),
 (23, 26, '2022-11-12', 1000, 18, 2, 0, 41, NULL),
@@ -1189,7 +1326,7 @@ INSERT INTO `Loan` (`number`, `account`, `date`, `value`, `term`, `rate`, `is_en
 (27, 31, '2022-11-12', 200, 4, 2, 1, NULL, NULL),
 (28, 33, '2022-12-03', 100, 4, 2, 0, NULL, NULL),
 (29, 4, '2022-12-03', 1200, 24, 2, 0, 5, NULL),
-(30, 2, '2022-12-03', 1000, 24, 2, 0, NULL, NULL),
+(30, 2, '2022-12-03', 1000, 24, 2, 0, 20, NULL),
 (31, 38, '2023-01-07', 241, 6, 2, 0, NULL, NULL),
 (32, 50, '2023-01-07', 241, 6, 2, 0, NULL, NULL),
 (33, 1, '2023-01-07', 1000, 12, 2, 0, NULL, NULL),
@@ -1468,54 +1605,54 @@ CREATE TABLE `Person` (
   `birth_day` date NOT NULL,
   `address` varchar(100) NOT NULL,
   `phone` varchar(10) NOT NULL DEFAULT '999999999',
-  `email` varchar(30) DEFAULT NULL
+  `is_dni_copy` tinyint(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `Person`
 --
 
-INSERT INTO `Person` (`dni`, `names`, `surnames`, `birth_day`, `address`, `phone`, `email`) VALUES
-('0000000000', '-----', '-----', '0001-01-01', '-----', '0000000000', NULL),
-('0103005567', 'LAURA ANGELA', 'FERNANDEZ RUMIPULLA', '1968-01-03', '-----', '0993862673', NULL),
-('0401123609', 'MARIA ESTEFANIA', 'CHAPUESGAL NAZAMUES', '1960-12-04', '-----', '0985263231', NULL),
-('0703368118', 'MARIUXI ESPERANZA', 'CELI CULQUI', '1975-01-24', '-----', '0000000000', NULL),
-('0803130632', 'ELBA CECILIA', 'SANCHEZ VASCO', '1986-12-25', '-----', '0959539380', NULL),
-('0804528958', 'CARLOS DANIEL', 'CELI SANCHEZ', '2005-09-05', '-----', '0000000000', NULL),
-('1703253326', 'MARIA SOLEDAD', 'VASCO TUPIZA', '0001-01-01', '-----', '0000000000', NULL),
-('1703277978', 'LUIS ENRIQUE', 'VASCO TUPIZA', '1951-02-13', '-----', '0982860859', NULL),
-('1703919538', 'MARIA DEL CARMEN', 'ESPIN DIAZ', '1956-01-10', '-----', '0994780033', NULL),
-('1706360177', 'VICTOR MANUEL', 'VASCO TUPIZA', '1955-12-18', '-----', '0000000000', NULL),
-('1706772884', 'EDWIN AMILCAR RAUL', 'VARGAS ALCOCER', '1964-01-20', '-----', '0994538251', NULL),
-('1707949101', 'AMPARO DEL PILAR', 'PILLAJO GUERRA', '1965-07-19', '-----', '0984052800', NULL),
-('1707953327', 'MARTHA CECILIA', 'VASCO PACHACAMA', '1964-09-16', '-----', '0962559902', NULL),
-('1708049141', 'JAVIER PATRICIO', 'VARGAS GUALPA', '1976-06-30', '-----', '0991431060', NULL),
-('1708550197', 'LUIS ANIBAL', 'ESPIN VASCO', '1972-04-23', '-----', '0000000000', NULL),
-('1709878704', 'ANA MARIA', 'CAMACHO SOSA', '0001-01-01', '-----', '0000000000', NULL),
-('1709972655', 'BERTHA UBALDINA', 'ESPIN VASCO', '1976-09-22', 'Antonio tandazo y via al IASA', '0997834327', NULL),
-('1711651347', 'MARIA SUSANA', 'CUEVA RAIMUNDO', '1975-11-14', '-----', '0000000000', NULL),
-('1712646221', 'YOLANDA DEL PILAR', 'ESPIN VASCO', '1973-09-11', '-----', '0000000000', NULL),
-('1713072856', 'MIGUEL ANGEL', 'GUTIERREZ GUTIERREZ', '1973-09-05', '-----', '0985263231', NULL),
-('1713328449', 'SANDRA JANETH', 'SANCHEZ VASCO', '1976-02-28', '-----', '0983789879', NULL),
-('1713829677', 'MARIA JACQUELINE', 'ÑACATO TIPAN', '1978-08-14', '-----', '0987164585', NULL),
-('1713848875', 'MARIA MAGDALENA', 'CULQUI PILLAJO', '1979-07-06', '-----', '0998946761', NULL),
-('1714681986', 'DARIO GERARDO', 'PACHACAMA VALVERDE', '1987-09-03', '-----', '0000000000', NULL),
-('1714728027', 'MARIANA DE JESUS', 'ALOMOTO TUPIZA', '1981-06-08', '-----', '0991062253', NULL),
-('1714932025', 'LADIS MARLENE', 'ARCOS MORALES', '1968-05-05', '-----', '0000000000', NULL),
-('1715406227', 'MAYRA HAYDE', 'SANCHEZ VASCO', '1980-11-03', '-----', '0989096053', NULL),
-('1720896222', 'EDISON PAUL', 'LOGACHO TUPIZA', '1992-09-14', '-----', '0000000000', NULL),
-('1722815907', 'PAOLA MARISOL', 'PACHACAMA ESPIN', '1994-10-04', 'Av. Antonio Tandazo y Via IASA', '0993270530', NULL),
-('1723610976', 'RICARDO ALEXANDER', 'GUAMAN ÑACATO', '0001-01-01', '-----', '0000000000', NULL),
-('1725975658', 'KAREN LIZETH', 'LUGMAÑA ESPIN', '1999-04-30', '-----', '0984795590', NULL),
-('1727196279', 'NYANELI VANESSA', 'ARTEAGA CHICANGO', '1998-06-18', '-----', '0000000000', NULL),
-('1727625434', 'LENIN JAVIER', 'CULQUI VELASTEGUI', '2011-01-19', '-----', '2083344', NULL),
-('1751905850', 'MAYRA ELIZABETH', 'CORNEJO FERNANDEZ', '2005-10-17', '-----', '0986037412', NULL),
-('1752387504', 'LUIS SANTIAGO', 'CUASCOTA CHICAIZA', '1996-12-17', 'Rancho los Pinos', '0995497436', 'cuascota442@gmail.com'),
-('1754218806', 'SAMANTHA LIZETH', 'PACHACAMA ESPIN', '0001-01-01', '-----', '0000000000', NULL),
-('1755007893', 'JOSUE ISMAEL', 'SILVA CULQUI', '2008-12-15', '-----', '022083304', NULL),
-('1755176342', 'MICHAEL MOISES', 'CULQUI SANCHEZ', '2009-01-25', '-----', '2083513', NULL),
-('1756525109', 'MATIAS ISRAEL', 'SUNTAXI LUGMAÑA', '2014-04-04', '-----', '0984795590', NULL),
-('1760203248', 'GABRIEL SALOMON', 'CULQUI BETANCURT', '2020-04-20', '-----', '0000000000', NULL);
+INSERT INTO `Person` (`dni`, `names`, `surnames`, `birth_day`, `address`, `phone`, `is_dni_copy`) VALUES
+('0000000000', '-----', '-----', '0001-01-01', '-----', '0000000000', 0),
+('0103005567', 'LAURA ANGELA', 'FERNANDEZ RUMIPULLA', '1968-01-03', '-----', '0993862673', 1),
+('0401123609', 'MARIA ESTEFANIA', 'CHAPUESGAL NAZAMUES', '1960-12-04', '-----', '0985263231', 1),
+('0703368118', 'MARIUXI ESPERANZA', 'CELI CULQUI', '1975-01-24', '-----', '0000000000', 1),
+('0803130632', 'ELBA CECILIA', 'SANCHEZ VASCO', '1986-12-25', '-----', '0959539380', 1),
+('0804528958', 'CARLOS DANIEL', 'CELI SANCHEZ', '2005-09-05', '-----', '0000000000', 1),
+('1703253326', 'MARIA SOLEDAD', 'VASCO TUPIZA', '0001-01-01', '-----', '0000000000', 0),
+('1703277978', 'LUIS ENRIQUE', 'VASCO TUPIZA', '1951-02-13', '-----', '0982860859', 1),
+('1703919538', 'MARIA DEL CARMEN', 'ESPIN DIAZ', '1956-01-10', '-----', '0994780033', 1),
+('1706360177', 'VICTOR MANUEL', 'VASCO TUPIZA', '1955-12-18', '-----', '0000000000', 1),
+('1706772884', 'EDWIN AMILCAR RAUL', 'VARGAS ALCOCER', '1964-01-20', '-----', '0994538251', 1),
+('1707949101', 'AMPARO DEL PILAR', 'PILLAJO GUERRA', '1965-07-19', '-----', '0984052800', 1),
+('1707953327', 'MARTHA CECILIA', 'VASCO PACHACAMA', '1964-09-16', '-----', '0962559902', 1),
+('1708049141', 'JAVIER PATRICIO', 'VARGAS GUALPA', '1976-06-30', '-----', '0991431060', 1),
+('1708550197', 'LUIS ANIBAL', 'ESPIN VASCO', '1972-04-23', '-----', '0000000000', 1),
+('1709878704', 'ANA MARIA', 'CAMACHO SOSA', '0001-01-01', '-----', '0000000000', 0),
+('1709972655', 'BERTHA UBALDINA', 'ESPIN VASCO', '1976-09-22', 'Antonio tandazo y via al IASA', '0997834327', 1),
+('1711651347', 'MARIA SUSANA', 'CUEVA RAIMUNDO', '1975-11-14', '-----', '0000000000', 1),
+('1712646221', 'YOLANDA DEL PILAR', 'ESPIN VASCO', '1973-09-11', '-----', '0000000000', 1),
+('1713072856', 'MIGUEL ANGEL', 'GUTIERREZ GUTIERREZ', '1973-09-05', '-----', '0985263231', 1),
+('1713328449', 'SANDRA JANETH', 'SANCHEZ VASCO', '1976-02-28', '-----', '0983789879', 1),
+('1713829677', 'MARIA JACQUELINE', 'ÑACATO TIPAN', '1978-08-14', '-----', '0987164585', 1),
+('1713848875', 'MARIA MAGDALENA', 'CULQUI PILLAJO', '1979-07-06', '-----', '0998946761', 1),
+('1714681986', 'DARIO GERARDO', 'PACHACAMA VALVERDE', '1987-09-03', '-----', '0000000000', 1),
+('1714728027', 'MARIANA DE JESUS', 'ALOMOTO TUPIZA', '1981-06-08', '-----', '0991062253', 1),
+('1714932025', 'LADIS MARLENE', 'ARCOS MORALES', '1968-05-05', '-----', '0000000000', 1),
+('1715406227', 'MAYRA HAYDE', 'SANCHEZ VASCO', '1980-11-03', '-----', '0989096053', 1),
+('1720896222', 'EDISON PAUL', 'LOGACHO TUPIZA', '1992-09-14', '-----', '0000000000', 1),
+('1722815907', 'PAOLA MARISOL', 'PACHACAMA ESPIN', '1994-10-04', 'Av. Antonio Tandazo y Via IASA', '0993270530', 1),
+('1723610976', 'RICARDO ALEXANDER', 'GUAMAN ÑACATO', '0001-01-01', '-----', '0000000000', 0),
+('1725975658', 'KAREN LIZETH', 'LUGMAÑA ESPIN', '1999-04-30', '-----', '0984795590', 1),
+('1727196279', 'NYANELI VANESSA', 'ARTEAGA CHICANGO', '1998-06-18', '-----', '0000000000', 1),
+('1727625434', 'LENIN JAVIER', 'CULQUI VELASTEGUI', '2011-01-19', '-----', '2083344', 1),
+('1751905850', 'MAYRA ELIZABETH', 'CORNEJO FERNANDEZ', '2005-10-17', '-----', '0986037412', 1),
+('1752387504', 'LUIS SANTIAGO', 'CUASCOTA CHICAIZA', '1996-12-17', 'Rancho los Pinos', '0995497436', 1),
+('1754218806', 'SAMANTHA LIZETH', 'PACHACAMA ESPIN', '0001-01-01', '-----', '0000000000', 1),
+('1755007893', 'JOSUE ISMAEL', 'SILVA CULQUI', '2008-12-15', '-----', '022083304', 1),
+('1755176342', 'MICHAEL MOISES', 'CULQUI SANCHEZ', '2009-01-25', '-----', '2083513', 1),
+('1756525109', 'MATIAS ISRAEL', 'SUNTAXI LUGMAÑA', '2014-04-04', '-----', '0984795590', 1),
+('1760203248', 'GABRIEL SALOMON', 'CULQUI BETANCURT', '2020-04-20', '-----', '0000000000', 1);
 
 --
 -- Índices para tablas volcadas
@@ -1597,13 +1734,13 @@ ALTER TABLE `Account`
 -- AUTO_INCREMENT de la tabla `Discharge`
 --
 ALTER TABLE `Discharge`
-  MODIFY `number` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `number` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT de la tabla `Entry`
 --
 ALTER TABLE `Entry`
-  MODIFY `number` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=228;
+  MODIFY `number` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=261;
 
 --
 -- AUTO_INCREMENT de la tabla `Entry_type`
