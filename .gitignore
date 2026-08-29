@@ -1,0 +1,21 @@
+# Variables de entorno / secretos
+.env
+.env.*
+!.env.example
+
+# Backups SIN cifrar
+backups/*.sql
+backups/*.sql.gz
+
+# Llaves o secretos
+*.key
+*.pem
+*.secret
+
+# macOS
+.DS_Store
+
+# VS Code local
+.vscode/
+
+database/init/*.sql
